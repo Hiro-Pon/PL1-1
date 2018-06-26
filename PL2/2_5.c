@@ -13,7 +13,7 @@ int main(void){
         union crypt A;
         union tmp t;
 
-        A.i = ????;
+        A.i = ??;
 
         t.s = A.t[0].s;
         A.t[0].s = A.t[1].s;
