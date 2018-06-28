@@ -52,3 +52,7 @@ struct fraction divs(struct fraction a,struct fraction b ) {
 
   return mul(a,b);
 }
+
+struct fraction yaku(struct fraction a){
+
+}

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,7 +43,7 @@ student* search(student *first, char name[20]){
   student *now;
   for (now = first->next; now != first ; now = now->next) {
     if (!strcmp(now->name , name)){
-      return &now;
+      return now;
     }
   }
   return NULL;
@@ -77,8 +78,9 @@ int main(){
 
     data(INIAD,"Jyoho");
 
+    printf("ABCD\n");
     student *a;
     a = search(INIAD,"Jyoho");
-    printf("%s\n", );
+    print(a);
 
 }
