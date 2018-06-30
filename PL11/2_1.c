@@ -4,11 +4,12 @@
 double my_exp(double x, int n){
   double ans = 1.0, y = 1.0;
 
-  for (int i = 1; i <= n; i++){
-    for (int z = y; z == 0; y--) {
-      y = y * z;
+  for (float i = 1; i <= n; i++){
+    for (float z = i; z != 0; z--){
+      y = y *(x / z);
+      printf("%lf/%lf\n", x,z);
     }
-    ans += x**i / y;
+    ans += y;
   }
 
   return ans;
