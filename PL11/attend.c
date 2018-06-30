@@ -11,7 +11,7 @@ unsigned int subtwo(unsigned int a){
 
 
 int main(void){
-  unsigned int (*p[1])(unsigned int) = {addtwo(unsigned int),subtwo(unsigned int)};
+  unsigned int (*p[])(unsigned int) = {addtwo,subtwo};
   printf("addtwo : %u \n", p[0](4) );
   printf("subtwo : %u \n", p[1](4) );
 }
