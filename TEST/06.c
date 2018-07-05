@@ -9,4 +9,8 @@ int main() {
   char *(*p_magic)() = p;
   char *str = (*p_magic)();
   printf("%s\n", str);
+
+
+
+  sadsads
 }

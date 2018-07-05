@@ -66,7 +66,7 @@ Diaries push_front(Diaries s, int Y, int M, int D, char T[200]){
   else{
     a->next = s.head;
     a->prev = s.tail;
-    s.prev =  a;
+    s.head =  a;
   }
 
   return s;
@@ -105,10 +105,11 @@ int main(void){
   s = push_back(s,1926, 12, 25, "昭和時代スタート!");
 
   print(s);
-  /*
+
   s = push_front(s, 1912, 7, 30, "大正時代スタート!");
   s = push_back(s, 1989, 1, 7, "平成時代スタート!");
   print(s);
+  /*
 
   s = pop_front(s);
   print(s);
