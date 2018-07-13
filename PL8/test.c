@@ -86,7 +86,8 @@ Diaries delete_all(Diaries s){
 void print(Diaries s){
   if (s.head!=NULL && s.tail !=NULL){
     Diary *tmp;
-    for ( ; s.head == tmp; tmp = tmp->next ){
+    printf("%d 年 %d 月 %d 日 :  %s \n", tmp->year, tmp->month, tmp->day, tmp->title);
+    for (tmp = tmp->next; s.head != tmp->next; tmp = tmp->next ){
       printf("%d 年 %d 月 %d 日 :  %s \n", tmp->year, tmp->month, tmp->day, tmp->title);
     }
   }
@@ -104,12 +105,11 @@ int main(void){
 
   s = push_back(s,1926, 12, 25, "昭和時代スタート!");
 
-  print(s);
-
   s = push_front(s, 1912, 7, 30, "大正時代スタート!");
   s = push_back(s, 1989, 1, 7, "平成時代スタート!");
   print(s);
   /*
+
 
   s = pop_front(s);
   print(s);
