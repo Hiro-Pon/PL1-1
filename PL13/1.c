@@ -132,7 +132,8 @@ void print(){
 
 
 int profrate(){
-  int profession_List[4];
+  float profession_List[4];
+  char PN_List[4][10] = {"Strudent" , "Company" , "PartTime" , "Others"};
   for (int i; i < maxid; i++) {
     switch (List[i].Profession) {
       case Student:
@@ -151,9 +152,8 @@ int profrate(){
   }
 
   for (int i; i < 4; i++) {
-    int tm = profession_List[i] / maxid;
-    printf("%d\n", tm);
-    printf("%d\n", profession_List[1]);
+    float tm = (profession_List[i] / (float)maxid) * 100;
+    printf("%s:%3.0f%%\n", PN_List[i],tm);
   }
 }
 
@@ -161,12 +161,12 @@ int main(void){
   char command[100];
 
   while(1){
-    printf("\nPlease input a command: Add, Print, Exit\n>>> ");
+    printf("\nPlease input a command: Add, Print, Profrate, Exit\n>>> ");
     scanf("%s", command); // scanfでコマンドを入力
 
     if (!strcmp(command,"Add")) addquestionnaire();
     else if (!strcmp(command,"Print")) print();
-    else if (!strcmp(command,"Profrate")) profrate();
+    else if (!strcmp(command,"P")) profrate();
     else if (!strcmp(command,"Exit")) break;
   }
 }
