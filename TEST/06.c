@@ -4,13 +4,6 @@
 
 
 int main() {
-  void  *h = dlopen("libq3.so", RTLD_NOW);
-  void *p = dlsym(h,"magic");
-  char *(*p_magic)() = p;
-  char *str = (*p_magic)();
-  printf("%s\n", str);
-
-
-
-  sadsads
+  short sa[] = { 0, 1, 2, 3, 4 };
+  printf("%d\n", sizeof(sa));
 }

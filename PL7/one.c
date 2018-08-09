@@ -80,7 +80,9 @@ int main(){
 
     printf("ABCD\n");
     student *a;
-    a = search(INIAD,"Jyoho");
+
+    printf("AAAAAAAAAAAAAAAAAAA\n");
+    a = search(INIAD,"Renke");
     print(a);
 
 }

@@ -2,14 +2,13 @@
 #include <math.h>
 
 double my_exp(double x, int n){
-  double ans = 1.0, y = 1.0;
+  double ans,tmp;
 
-  for (float i = 1; i <= n; i++){
-    for (float z = i; z != 0; z--){
-      y = y *(x / z);
-      printf("%lf/%lf\n", x,z);
-    }
-    ans += y;
+  ans=x;
+  tmp=x;
+  for(int i=1;i<n;i++){
+    tmp=tmp*(-1)*x*x/((2.0*i)*(2.0*i+1.0));
+    ans=ans+tmp;
   }
 
   return ans;
